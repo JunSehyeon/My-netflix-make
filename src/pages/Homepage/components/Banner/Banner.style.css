@@ -1,46 +1,46 @@
-
-.banner{
+.banner {
     height: 56vh;
     background-position:center;
     background-repeat:no-repeat;
     background-size:cover;
-    width:100%
-    
-}
-.banner:before{
-    content:'';
-    background:linear-gradient(to top,black,transparent);
-    position:absolute;
-    left: 0;
-    height: 56vh;
     width:100%;
 }
 
-.banner-text-area{
-    width:40%;
-    display:flex;
-    flex-direction:column;
+.banner:before {
+    content: '';
+    background: linear-gradient(to top, black, transparent);
+    position: absolute;
+    left: 0;
+    height: 56vh;
+    width: 100%;
+}
+
+.banner-text-area {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    height:100%;
-    padding:2rem;
-
+    height: 100%;
+    padding: 2rem;
 }
 
-.banner-text-area>*{
-    z-index:2;
+.banner-text-area > * {
+    z-index: 2;
 }
 
-.white{
-    color:white;
+.white {
+    color: white;
 }
 
-@media (orientation: portrait){
-    .banner{
-        width:90vh;
-        max-width:90%;
+/* 모바일 화면에서 배너 이미지 조정 */
+@media (max-width: 768px) {
+    .banner {
+        height: 40vh; /* 모바일 화면에서 배너 높이 조정 */
+        background-position: center center; /* 배너 이미지 중앙 정렬 */
+        background-size: cover; /* 이미지가 배너를 완전히 덮도록 설정 */
     }
-    .banner-text-area{
-        width:90vh;
-        max-width:90%;
+    .banner-text-area {
+        width: 90%; /* 모바일 화면에서 텍스트 영역 폭 조정 */
+        padding: 1rem; /* 모바일에서 패딩 조정 */
     }
 }

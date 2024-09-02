@@ -1,7 +1,9 @@
 import React from 'react'
 import Banner from "./components/Banner/Banner";
 import { usePopularMoviesQuery } from '../../hooks/usePopularMovies'; // 경로를 올바르게 수정하세요
-
+import PopularMovieSlide from './components/PopularMovieSlide/PopularMovieSlide';
+import TopRatedMovies from './components/TopRatedMovies/TopRatedMovies';
+import UpComingMovies from './components/UpComingMovies/UpComingMovies';
 //1.배너 => popular 영화를 들고와서 첫번쨰 아이템을 보여주자
 //2.popular movie
 //3.top rated movie
@@ -20,6 +22,9 @@ const Homepage = () => {
       {popularMovies.results && popularMovies.results.length > 0 && (
         <Banner movie={popularMovies.results[0]} />
       )}
+      <PopularMovieSlide/>
+      <TopRatedMovies/>
+      <UpComingMovies/>
     </div>
 
   );
