@@ -16,7 +16,7 @@ function App() {
   return (
   <div className="App">
     <Routes>
-      <Route path="/" element={<AppLayout/>}>//user화면
+      <Route path="/" element={<AppLayout/>}>
         <Route index element={<Homepage/>}/>
         <Route path="movies">
           <Route index element={<MoviePage/>}/>

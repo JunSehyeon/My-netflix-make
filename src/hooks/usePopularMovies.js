@@ -1,11 +1,13 @@
 import {useQuery} from "@tanstack/react-query";
 import api from "../utils/api"
-const fetchPopularMovies =async () => {
+
+const fetchPopularMovies =async() => {
  
         return await api.get('/movie/popular');
 }   
+
 const testFetchPopularMovies = async () => {
-    try {
+   try {
       const response = await fetchPopularMovies();
       console.log("Fetched popular movies:", response.data);
     } catch (error) {
@@ -14,10 +16,11 @@ const testFetchPopularMovies = async () => {
   };
   
   testFetchPopularMovies();
+
 export const usePopularMoviesQuery=()=>{
-    return useQuery({
-        queryKey: ['movie-popular'],
-        queryFn: fetchPopularMovies,
-        select:(result)=>result.data,
-    })
+  return useQuery({
+    queryKey: ['movie-popular'],
+    queryFn: fetchPopularMovies,
+    select: (result) => result.data,
+  });
 }
