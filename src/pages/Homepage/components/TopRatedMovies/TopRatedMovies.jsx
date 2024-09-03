@@ -3,7 +3,7 @@ import { useTopRatedMoviesQuery } from '../../../../hooks/useTopRatedMovies'; //
 import { Alert } from 'react-bootstrap'; // 'bootstrap' 대신 'react-bootstrap'로 수정
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import MovieCard from '../MovieCard/MovieCard';
+import MovieCard from '../../../../common/MovieCard/MovieCard';
 import "./TopRatedMovies.style.css";
 
 const responsive = {
