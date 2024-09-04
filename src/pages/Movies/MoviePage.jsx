@@ -4,7 +4,8 @@ import { useSearchParams } from 'react-router-dom'
 import { Alert,Container,Spinner,Row,Col } from 'react-bootstrap';
 import MovieCard from '../../common/MovieCard/MovieCard';
 import ReactPaginate from 'react-paginate';
-import './MoviePage.css'
+import './MoviePage.css'; // CSS 파일을 임포트
+
 //경로 2가지
 //nav바에서 클릭해서 온경우 => popularmovie 보여주기
 //keyword를 입력해서 온경우 =>keyword와 관련된 영화들을 보여줌
