@@ -1,6 +1,7 @@
 import {useQuery} from "@tanstack/react-query";
 import api from "../utils/api"
 
+
 const fetchPopularMovies =async() => {
  
         return await api.get('/movie/popular');
