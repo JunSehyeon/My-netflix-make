@@ -1,38 +1,62 @@
-  /*페이지 네이션 css*/
 .pagination {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    justify-content: center; /* 가운데 정렬 */
-    margin-top: 20px; /* 상단 여백 */
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.page-item {
+  margin: 0 5px; /* 좌우 간격 */
+}
+
+.page-link {
+  color: white; /* 기본 글씨 색상 */
+  font-size: 1.2rem; /* 글씨 크기 */
+  background-color: black; /* 배경색을 검정으로 설정 */
+  border: none; /* 테두리 제거 */
+  padding: 10px 15px; /* 패딩 추가 */
+  border-radius: 5px; /* 모서리 둥글게 */
+  cursor: pointer; /* 커서 모양 */
+  text-decoration: none; /* 밑줄 제거 */
+}
+
+
+
+.active .page-link {
+  color: #ac2a2a; /* 활성화된 페이지의 글씨 색상 (빨간색) */
+  font-weight: bold; /* 활성화된 페이지 글씨 두껍게 */
+  background-color: black; /* 활성화된 페이지의 배경색 (검정색 유지) */
+}
+
+/* 모바일 버전 스타일 */
+@media (max-width: 576px) { /* 작은 화면에 대해 조정 (아이폰 SE를 포함) */
+
+  .pagination {
+    font-size: 0.9rem; /* 글씨 크기를 줄여서 모바일 화면에 맞게 조정 */
   }
-  
+
   .page-item {
-    margin: 0 5px; /* 좌우 간격 */
+    margin: 0 2px; /* 좌우 간격 줄이기 */
   }
-  
+
   .page-link {
-    padding: 10px 15px; /* 패딩 */
-    color: white; /* 글씨 색상 */
-    background-color: black; /* 배경 색상 */
-    border-radius: 50%; /* 둥근 테두리 */
-    cursor: pointer; /* 커서 모양 */
-    text-decoration: none; /* 밑줄 제거 */
-  }
-  
-  .page-link:hover {
-    background-color: #333; /* 호버시 배경 색상 변경 */
-  }
-  
-  .active .page-link,
-  .page-link:active,
-  .page-link:focus-visible {
-    background-color: #ac2a2a; /* 활성화된 페이지의 배경 색상 */
-    color: white; /* 활성화된 페이지의 글씨 색상 */
-    border: 2px solid #ac2a2a; /* 활성화된 페이지의 테두리 색상 */
-    outline: none; /* 클릭시 기본 아웃라인 제거 */
+    padding: 5px 10px; /* 패딩 줄이기 */
+    font-size: 1rem; /* 글씨 크기 줄이기 */
   }
 
-    /*모바일 버전 css*/
+  /* 영화 카드 중앙 정렬 */
+  .movie-list {
+    display: flex;
+    flex-direction: column; /* 세로로 정렬 */
+    align-items: center; /* 중앙 정렬 */
+    padding: 0; /* 패딩 제거 */
+  }
 
-    
+  .movie-list .col {
+    width: 100%; /* 카드의 너비를 100%로 설정 */
+    display: flex;
+    justify-content: center; /* 카드가 중앙에 오도록 정렬 */
+    margin-bottom: 20px; /* 아래쪽 여백 추가 */
+  }
+}
