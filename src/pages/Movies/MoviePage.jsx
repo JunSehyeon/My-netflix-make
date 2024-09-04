@@ -46,9 +46,9 @@ const MoviePage = () => {
   return (
     <Container>
       <Row>
-        <Col lg={4} xs={12}> 필터</Col>
+        <Col lg={4} xs={12}>filter</Col>
         <Col lg={8} xs={12}>
-        <Row>
+        <Row className="movie-list">
           {data?.results.map((movie,index)=>(
             <Col key={index} lg={4} xs={12}>
               <MovieCard movie={movie}/>
@@ -56,12 +56,12 @@ const MoviePage = () => {
           ))}
         </Row>
         <ReactPaginate
-        nextLabel="next >"
+        nextLabel=">"
         onPageChange={handlePageClick}
         pageRangeDisplayed={3}
         marginPagesDisplayed={2}
         pageCount={Math.min(data.total_pages, 12)}
-        previousLabel="< previous"
+        previousLabel="<"
         pageClassName="page-item"
         pageLinkClassName="page-link"
         previousClassName="page-item"
