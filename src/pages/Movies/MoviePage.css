@@ -3,7 +3,7 @@
   list-style: none;
   padding: 0;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .page-item {
@@ -56,7 +56,7 @@
   flex-wrap: wrap; /* 카드가 화면 크기에 맞게 줄바꿈 되도록 설정 */
   justify-content: center; /* 카드들이 중앙에 정렬되도록 설정 */
   padding: 0; /* 패딩 제거 */
-  margin: 0; /* 마진 제거 */
+  margin: 0;/* 마진 제거 */
 }
 
 /* 카드 스타일 */

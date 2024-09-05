@@ -1,0 +1,226 @@
+.movie-detail-container {
+    display: flex;
+    margin: 20px;
+  }
+  
+  .movie-poster {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .poster-image {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .movie-info {
+    flex: 2;
+    padding: 10px;
+  }
+  
+  .movie-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .movie-genres,
+  .movie-rating,
+  .movie-description {
+    margin-bottom: 15px;
+  }
+  
+  .movie-genres strong,
+  .movie-rating strong {
+    font-weight: bold;
+  }
+  
+  .movie-description {
+    font-size: 1rem;
+    color: #c1c1c1;
+  }
+
+  /* MovieDetailPage.style.css */
+
+.movie-detail-container {
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  .movie-poster {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .poster-image {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .movie-info {
+    flex: 2;
+  }
+  
+  .movie-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .movie-genres,
+  .movie-rating,
+  .movie-description,
+  .movie-popularity,
+  .movie-budget,
+  .movie-release-date {
+    margin-bottom: 10px;
+  }
+  
+  .movie-popularity,
+  .movie-budget,
+  .movie-release-date {
+    font-size: 1.2rem;
+  }
+  
+  /* MovieDetailPage.style.css */
+
+.movie-reviews {
+  margin-top: 30px;
+}
+
+.review {
+  margin-bottom: 20px;
+}
+
+.review h4 {
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.review p {
+  font-size: 1rem;
+  color: #c1c1c1;
+}
+
+.reviews-title{
+  color: #da0c0c;
+}
+
+/* MovieDetailPage.style.css */
+.movie-recommendations {
+  margin-top: 50px;
+}
+
+.recommendations-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.recommendations-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.recommendation-item {
+  flex: 1 1 30%;
+  text-align: center;
+}
+
+.recommendation-poster {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.recommendation-title {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .movie-detail-container {
+    flex-direction: column;
+  }
+
+  .movie-recommendations {
+    margin-top: 30px;
+    order: -1; /* 사이드바처럼 위쪽에 표시 */
+  }
+}
+
+/* MovieDetailPage.style.css */
+.preview-button {
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+/* MovieDetailPage.style.css */
+
+/* 기존 preview-button 스타일이 있을 경우 유지 */
+.preview-button {
+  width: 100%; /* 버튼의 너비를 100%로 설정하여 동일한 너비로 조정 */
+  max-width: 200px; /* 최대 너비를 설정하여 너무 길어지지 않게 조정 */
+  margin: 10px 0; /* 상하 여백을 추가하여 버튼 간의 간격을 설정 */
+}
+
+/* 새로운 버튼 스타일 추가 */
+.reviews-toggle-button {
+  width: 100%; /* 버튼의 너비를 100%로 설정하여 동일한 너비로 조정 */
+  max-width: 200px; /* 최대 너비를 설정하여 너무 길어지지 않게 조정 */
+  margin: 10px 0; /* 상하 여백을 추가하여 버튼 간의 간격을 설정 */
+}
+
+/* 모달 콘텐츠 배경색과 글씨 색상 설정 */
+.modal-content {
+  background-color: #cb111b !important; /* Netflix 빨간색 배경 */
+  color: #000000 !important; /* 검정색 글씨 */
+  border-radius: 0.5rem; /* 모서리 둥글게 */
+  border: none; /* 기본 테두리 제거 */
+}
+
+/* 모달 헤더 스타일 설정 */
+.modal-header {
+  border-bottom: none; /* 기본 하단 테두리 제거 */
+}
+
+/* 모달 제목 글씨 색상 설정 */
+.modal-title {
+  color: #000000; /* 검정색 제목 */
+}
+
+/* 모달 바디 글씨 색상 설정 */
+.modal-body {
+  color: #000000; /* 검정색 본문 텍스트 */
+}
+
+/* 모달 푸터 스타일 설정 */
+.modal-footer {
+  border-top: none; /* 기본 상단 테두리 제거 */
+  background-color: #e50914; /* 모달과 같은 빨간색 배경 */
+}
+
+/* 닫기 버튼 색상 조정 */
+.btn-close {
+  filter: invert(1); /* 닫기 버튼을 흰색으로 변경 */
+}
+
+/* 모달 콘텐츠의 이미지에 둥근 모서리 적용 (선택 사항) */
+.modal-content img {
+  border-radius: 0.5rem; /* 둥근 모서리 */
+}
+
+.modal-title {
+  font-size: 10rem; /* 폰트 크기 증가 */
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* 귀여운 폰트 패밀리 */
+  font-weight: 10; /* 굵은 글씨 */
+  color: #ffffff; /* 흰색 글씨 (필요에 따라 조정) */
+  text-align: center; /* 중앙 정렬 */
+}
