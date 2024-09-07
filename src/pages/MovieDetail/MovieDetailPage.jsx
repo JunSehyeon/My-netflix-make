@@ -18,6 +18,7 @@ const MovieDetailPage = () => {
 
   const [show, setShow] = useState(false);
   const [showReviews, setShowReviews] = useState(false);
+  const [expandedReviews, setExpandedReviews] = useState({}); // 각 리뷰의 확장 여부를 관리하는 상태
 
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
@@ -28,6 +29,14 @@ const MovieDetailPage = () => {
 
   const handleToggleReviews = () => {
     setShowReviews(!showReviews);
+  };
+
+  // 리뷰 "더보기" 버튼 클릭 시 호출되는 함수
+  const toggleReviewExpansion = (reviewId) => {
+    setExpandedReviews(prevState => ({
+      ...prevState,
+      [reviewId]: !prevState[reviewId]
+    }));
   };
 
   if (isLoading) {
@@ -87,13 +96,24 @@ const MovieDetailPage = () => {
               ) : isReviewsError ? (
                 <Alert variant="danger">{reviewsError.message}</Alert>
               ) : reviews && reviews.results && reviews.results.length > 0 ? (
-                reviews.results.map((review) => (
-                  <div key={review.id} className="review">
-                    <h4>{review.author}</h4>
-                    <p>{review.content}</p>
-                    <hr />
-                  </div>
-                ))
+                reviews.results.map((review) => {
+                  const isExpanded = expandedReviews[review.id];
+                  const reviewContent = isExpanded 
+                    ? review.content 
+                    : review.content.split(' ').slice(0, 30).join(' ') + '...'; // 30단어까지만 표시
+
+                  return (
+                    <div key={review.id} className="review">
+                      <h4>{review.author}</h4>
+                      <p>{reviewContent}</p>
+                      {/* "더보기" 버튼을 빨간색으로 변경 */}
+                      <Button variant="danger" onClick={() => toggleReviewExpansion(review.id)}>
+                        {isExpanded ? 'Show Less' : 'Show More'}
+                      </Button>
+                      <hr />
+                    </div>
+                  );
+                })
               ) : (
                 <p>No reviews available.</p>
               )}
